@@ -181,13 +181,18 @@ body {
 
 /*CONTENT*/
 .container {
-  /*sets up flexbox*/
-  display: flex;
-  flex-direction: column;
+/* sets up layout and center content */
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
+display: flex;
+flex-direction: column;
 }
 
 .row {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .white {
@@ -199,7 +204,8 @@ body {
 }
 
 .main-content {
-  flex: 0 0 66.6%;
+  flex: 1 1 66.6%;
+  min-width: 260px;
   margin-top: 2rem;
   margin-bottom: 3rem;
   animation: fadeInUp 0.8s ease-out;
@@ -210,7 +216,8 @@ body {
 }
 
 .main-content-lg {
-  flex: 0 0 80%;
+  flex: 1 1 80%;
+  min-width: 260px;
   margin-top: 2rem;
   margin-bottom: 3rem;
   animation: fadeInUp 0.8s ease-out;
@@ -544,9 +551,6 @@ h4 {
   }
 }
 
-.container {
-  animation: fadeIn 1s ease-out;
-}
 
 /* SCROLL INDICATOR */
 .navbar::after {
@@ -588,9 +592,6 @@ a:focus, button:focus {
 }
 
 /* SMOOTH TRANSITIONS */
-* {
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
 /* CONTACT SECTION MOBILE RESPONSIVE */
 @media (max-width: 480px) {
   .contact-grid {
