@@ -1,433 +1,544 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <title>kaustubh vasagadekar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaustubh Vasagadekar — Frontend Developer</title>
+  <meta name="description"
+    content="Frontend developer with 2+ years building responsive, scalable React and TypeScript applications. Portfolio, experience and selected work." />
+  <meta name="author" content="Kaustubh Sanjeev Vasagadekar" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kaustubh Vasagadekar — Frontend Developer" />
+  <meta property="og:description"
+    content="Frontend developer building responsive, scalable React and TypeScript applications." />
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b4441f'/><text x='50' y='71' font-size='62' font-family='Georgia,serif' fill='%23faf9f6' text-anchor='middle'>K</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
-  <!-- BEGIN NAVBAR -->
+  <!-- ============================================================
+       ICON SPRITE — every icon in the page is a <use> of one of these.
+       Line icons inherit stroke, brand marks inherit fill.
+       ============================================================ -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C16.7 4.7 17.7 5 17.7 5c.6 1.7.2 2.9.1 3.2a4.6 4.6 0 0 1 1.2 3.2c0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M20.4 20.5h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.04c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3ZM5.3 7.4a2.1 2.1 0 1 1 0-4.1 2.1 2.1 0 0 1 0 4.1Zm1.8 13.1H3.6V9h3.5v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m2.5 6.5 9.5 6.8 9.5-6.8" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+    </symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4v16m0 0 6-6m-6 6-6-6" />
+    </symbol>
+    <symbol id="i-arrow-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 17 17 7m0 0H8m9 0v9" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 1.5v2.2M12 20.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M1.5 12h2.2M20.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+    </symbol>
+  </svg>
 
-  <!-- END NAVBAR -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="container">
-    <!-- HEADER -->
-    <div class="jumbotron">
-      <div class="jumbotron-text">  
-        <h1>KAUSTUBH SANJEEV VASAGADEKAR</h1>
-        <p>Frontend Developer | Pune, India</p>
+  <div class="shell">
+
+    <!-- ============================================================
+         RAIL — identity + navigation. Sticky beside the content on
+         desktop; becomes the page header on narrow screens.
+         ============================================================ -->
+    <header class="rail">
+      <div class="rail-top">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="identity-name">Kaustubh Sanjeev Vasagadekar</h1>
+        <p class="identity-role">Frontend Developer</p>
+        <p class="identity-meta">Pune, India · React &amp; TypeScript</p>
+
+        <nav class="rail-nav" aria-label="Section">
+          <ul>
+            <li><a href="#about"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">About</span></a></li>
+            <li><a href="#experience"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">Experience</span></a></li>
+            <li><a href="#projects"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">Projects</span></a></li>
+            <li><a href="#skills"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">Skills</span></a></li>
+            <li><a href="#education"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">Education</span></a></li>
+            <li><a href="#contact"><span class="nav-rule" aria-hidden="true"></span><span class="nav-label">Contact</span></a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="jumbotron-social">
-        <ul class="ul-social">
-          <li class="li-social-links">
-            <a class="social" href="https://github.com/KaustubhVasagadekar" target="_blank"><i class="fa fa-github"
-                aria-hidden="true"></i></a>
+
+      <div class="rail-bottom">
+        <ul class="social">
+          <li>
+            <a href="https://github.com/KaustubhVasagadekar" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub profile">
+              <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+            </a>
           </li>
-          <li class="li-social-links">
-            <a class="social" href="https://www.linkedin.com/in/kaustubh-vasagadekar" target="_blank"><i
-                class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <li>
+            <a href="https://www.linkedin.com/in/kaustubh-vasagadekar" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn profile">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>
+            </a>
           </li>
-          <li class="li-social-links">
-            <a class="social" href="mailto:kaustubhvasagadekar@gmail.com"><i class="fa fa-envelope"
-                aria-hidden="true"></i></a>
+          <li>
+            <a href="mailto:kaustubhvasagadekar@gmail.com" aria-label="Send an email">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>
+            </a>
           </li>
-          <li class="li-social-links">
-            <a class="social" href="tel:+919665950080"><i class="fa fa-phone" aria-hidden="true"></i></a>
+          <li>
+            <a href="tel:+919665950080" aria-label="Call">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>
+            </a>
+          </li>
+          <li class="social-spacer" aria-hidden="true"></li>
+          <li>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme"
+              aria-pressed="false">
+              <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+              <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+            </button>
           </li>
         </ul>
-      </div>
-      <div id="down-arrow">
-        <span><a href="#about"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></span>
-      </div>
-    </div>
-    <!-- END HEADER -->
 
-    <!-- BEGIN ABOUT -->
-    <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="about"></a>
-          <h2>Summary</h2>
-        </div>
-        <div class="content-body center">
-          <p>
-            Detail-oriented and innovative React Web Developer with over 2 years of experience in designing and
-            developing user-friendly, responsive web applications. Proficient in JavaScript, React.js, and modern
-            front-end technologies, with a strong focus on delivering scalable and efficient solutions. Adept at
-            collaborating with cross-functional teams to drive project success and enhance user experiences.
-          </p>
-        </div>
+        <a class="scroll-cue" href="#about">
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-down" /></svg>
+          <span>Scroll</span>
+        </a>
       </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END ABOUT -->
+    </header>
 
-    <!-- BEGIN EXPERIENCE -->
-    <div class="row">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="experience"></a>
-          <h2>Professional Experience</h2>
+    <!-- ============================================================
+         MAIN
+         ============================================================ -->
+    <main id="main">
+
+      <!-- ABOUT -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-head">
+          <span class="section-index">01</span>
+          <h2 class="section-title" id="about-title">Summary</h2>
         </div>
-        <div class="content-body">
-          <!-- TechBit Solutions -->
-          <div class="card">
-            <div class="card-header">
-              <h4>Nellsys Technologies Pvt Ltd, Hyderabad, India <span class="job-title">Jn. Software Developer</span></h4>
-              <span class="job-title">Mar 2024 - July 2025</span>
-            </div>
-            <div class="card-content">
-              <ul>
-                <li>Developed and maintained responsive web applications using React.js, improving user engagement by
-                  30%.</li>
-                <li>Implemented state management using Redux, resulting in a 25% reduction in application load time.
-                </li>
-                <li>Integrated RESTful APIs to fetch and display dynamic data, ensuring seamless user experiences.
-                </li>
-                <li>Collaborated with UI/UX designers to create intuitive interfaces, reducing user onboarding time by
-                  15%.</li>
-                <li>Optimized components for performance using lazy loading and memoization techniques.</li>
-                <li>Conducted code reviews and ensured adherence to best practices, improving code quality by 20%.</li>
+        <p class="lede">
+          Detail-oriented and innovative React Web Developer with over 2 years of experience in designing and
+          developing user-friendly, responsive web applications.
+        </p>
+        <p class="prose">
+          Proficient in JavaScript, React.js, and modern front-end technologies, with a strong focus on delivering
+          scalable and efficient solutions. Adept at collaborating with cross-functional teams to drive project
+          success and enhance user experiences.
+        </p>
+
+        <dl class="stat-row">
+          <div class="stat">
+            <dt>Experience</dt>
+            <dd>2+ yrs</dd>
+          </div>
+          <div class="stat">
+            <dt>Core stack</dt>
+            <dd>React · TS</dd>
+          </div>
+          <div class="stat">
+            <dt>Based in</dt>
+            <dd>Pune, IN</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="section-head">
+          <span class="section-index">02</span>
+          <h2 class="section-title" id="experience-title">Professional Experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="entry">
+            <p class="entry-period"><time datetime="2024-03">Mar 2024</time> — <time datetime="2025-07">Jul 2025</time></p>
+            <h3 class="entry-role">Jn. Software Developer</h3>
+            <p class="entry-org">Nellsys Technologies Pvt Ltd <span class="dot">·</span> Hyderabad, India</p>
+            <ul class="points">
+              <li>Developed and maintained responsive web applications using React.js, improving user engagement by 30%.</li>
+              <li>Implemented state management using Redux, resulting in a 25% reduction in application load time.</li>
+              <li>Integrated RESTful APIs to fetch and display dynamic data, ensuring seamless user experiences.</li>
+              <li>Collaborated with UI/UX designers to create intuitive interfaces, reducing user onboarding time by 15%.</li>
+              <li>Optimized components for performance using lazy loading and memoization techniques.</li>
+              <li>Conducted code reviews and ensured adherence to best practices, improving code quality by 20%.</li>
+            </ul>
+            <ul class="tags">
+              <li>React.js</li>
+              <li>Redux</li>
+              <li>REST APIs</li>
+              <li>Performance</li>
+              <li>Code review</li>
+            </ul>
+          </li>
+
+          <li class="entry">
+            <p class="entry-period"><time datetime="2019-08">Aug 2019</time> — <time datetime="2024-01">Jan 2024</time></p>
+            <h3 class="entry-role">Web Developer / UI&nbsp;UX Designer</h3>
+            <p class="entry-org">Freelance <span class="dot">·</span> Remote</p>
+            <ul class="points">
+              <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
+              <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
+              <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.</li>
+              <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
+              <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>Agile</li>
+            </ul>
+          </li>
+
+          <li class="entry">
+            <p class="entry-period"><time datetime="2023-04">Apr 2023</time> — <time datetime="2023-12">Dec 2023</time></p>
+            <h3 class="entry-role">Junior Web Developer</h3>
+            <p class="entry-org">Academic Affairs Pvt Ltd <span class="dot">·</span> Hyderabad, India</p>
+            <ul class="points">
+              <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
+              <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
+              <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.</li>
+              <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
+              <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>Agile</li>
+            </ul>
+          </li>
+
+          <li class="entry">
+            <p class="entry-period"><time datetime="2018-11">Nov 2018</time> — <time datetime="2019-05">May 2019</time></p>
+            <h3 class="entry-role">React JS Intern</h3>
+            <p class="entry-org">OpenWifi Labs Pvt Ltd <span class="dot">·</span> Hyderabad, India</p>
+            <ul class="points">
+              <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
+              <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
+              <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.</li>
+              <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
+              <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>Agile</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="section-head">
+          <span class="section-index">03</span>
+          <h2 class="section-title" id="projects-title">Selected Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <p class="project-num">01</p>
+            <h3 class="project-title">Booking Management &amp; Payment Portal <span class="project-client">Pravasy</span></h3>
+            <ul class="points">
+              <li>Developed a multi-screen booking platform using React, TypeScript, and MUI.</li>
+              <li>Built pages for viewing booking requests, creating new booking forms, and displaying detailed booking information.</li>
+              <li>Integrated Razorpay for one-time and installment payments, and implemented secure file upload via AWS S3.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>MUI</li>
+              <li>Razorpay</li>
+              <li>AWS S3</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <p class="project-num">02</p>
+            <h3 class="project-title">Real Estate Listing Dashboard</h3>
+            <ul class="points">
+              <li>Built using Next.js with TypeScript and MUI.</li>
+              <li>Developed UI for agents to post property listings, upload images, and manage inquiries.</li>
+              <li>Integrated AWS S3 for secure image uploads and built dynamic, form-heavy pages with advanced filtering.</li>
+            </ul>
+            <ul class="tags">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>MUI</li>
+              <li>AWS S3</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <p class="project-num">03</p>
+            <h3 class="project-title">Café Management Dashboard</h3>
+            <ul class="points">
+              <li>Converted Figma designs into responsive MUI components.</li>
+              <li>Built reusable UI modules for inventory, orders, and staff tracking.</li>
+              <li>Implemented sales analytics pages using React and TypeScript.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>MUI</li>
+              <li>Figma</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <p class="project-num">04</p>
+            <h3 class="project-title">Clinic Appointment Booking System</h3>
+            <ul class="points">
+              <li>Built booking flows with form validation, time-slot selection, and email confirmation.</li>
+              <li>Implemented the entire frontend using React, TypeScript, and MUI based on Figma prototypes.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>MUI</li>
+              <li>Figma</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <p class="project-num">05</p>
+            <h3 class="project-title">Pravasy.com <span class="project-client">Nellsys</span></h3>
+            <ul class="points">
+              <li>Built the public-facing website using React.js, TypeScript, and MUI.</li>
+              <li>Implemented responsive layouts and reusable components based on Figma designs.</li>
+              <li>Showcased Pravasy's services with clean UI.</li>
+            </ul>
+            <ul class="tags">
+              <li>React.js</li>
+              <li>TypeScript</li>
+              <li>MUI</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="section-head">
+          <span class="section-index">04</span>
+          <h2 class="section-title" id="skills-title">Skills</h2>
+        </div>
+
+        <dl class="skill-list">
+          <div class="skill-group">
+            <dt>Frontend</dt>
+            <dd>
+              <ul class="tags">
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Context API</li>
+                <li>TypeScript</li>
+                <li>Material&#8209;UI</li>
+                <li>Tailwind CSS</li>
+                <li>Bootstrap</li>
+                <li>React Bootstrap</li>
               </ul>
-            </div>
+            </dd>
           </div>
-          <!-- InnovateTech -->
-          <div class="card">
-            <div class="card-header">
-              <h4>Academic Affairs Pvt Ltd, Hyderabad, India <span class="job-title">Junior Web Developer</span></h4>
-              <span class="job-title">April 2023 - Dec 2023</span>
-            </div>
-            <div class="card-content">
-              <ul>
-                <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
-                <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
-                <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.
-                </li>
-                <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
-                <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+          <div class="skill-group">
+            <dt>Backend</dt>
+            <dd>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Socket.io</li>
               </ul>
-            </div>
+            </dd>
           </div>
-
-           <div class="card">
-            <div class="card-header">
-              <h4>OpenWifi Labs Pvt Ltd, Hyderabad, India <span class="job-title">React JS intern</span></h4>
-              <span class="job-title">Nov 2018 - May 2019</span>
-            </div>
-            <div class="card-content">
-              <ul>
-                <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
-                <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
-                <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.
-                </li>
-                <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
-                <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+          <div class="skill-group">
+            <dt>Cloud &amp; DevOps</dt>
+            <dd>
+              <ul class="tags">
+                <li>AWS S3</li>
+                <li>CloudFront</li>
+                <li>Lambda</li>
+                <li>EC2 <span class="tag-note">basic</span></li>
+                <li>Firebase</li>
+                <li>Azure DevOps</li>
               </ul>
-            </div>
+            </dd>
           </div>
-        </div>
-
-         <div class="card">
-            <div class="card-header">
-              <h4>Freelance, Remote <span class="job-title">web Developer / UI/UX Designer</span></h4>
-              <span class="job-title">Aug 2019 - Jan 2024</span>
-            </div>
-            <div class="card-content">
-              <ul>
-                <li>Built reusable React components for multiple projects, reducing development time by 10%.</li>
-                <li>Utilized Tailwind CSS and Bootstrap to create responsive and visually appealing layouts.</li>
-                <li>Assisted in migrating legacy code to modern React frameworks, enhancing application scalability.
-                </li>
-                <li>Worked closely with backend developers to integrate APIs, ensuring smooth data flow.</li>
-                <li>Participated in Agile sprints, contributing to timely project deliveries.</li>
+          <div class="skill-group">
+            <dt>Databases</dt>
+            <dd>
+              <ul class="tags">
+                <li>Firebase Firestore</li>
+                <li>MongoDB</li>
               </ul>
-            </div>
+            </dd>
           </div>
-        </div>
-      </div>
-    </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END EXPERIENCE -->
-
-    <!-- BEGIN EDUCATION -->
-    <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="education"></a>
-          <h2>Education</h2>
-        </div>
-        <div class="content-body">
-          <div class="card">
-            <div class="card-header">
-              <h4>
-                Bachelor of Engineering in Computer Science Engineering
-                <span class="job-title">Guru Nanak Institutions Technical Campus, Hyderabad, India</span>
-                <span class="job-title">Year of Passing - 2024</span>
-              </h4>
-            </div>
-            <div class="card-content">
-              <p>CGPA: 6.5/10</p>
-            </div>
-          </div>
-      
-          <div class="card">
-            <div class="card-header">
-              <h4>
-                Diploma in Computer Science Engineering
-                <span class="job-title">TKR College of Engineering & Technology, Hyderabad, India</span>
-                <span class="job-title">Year of Passing - 2020</span>
-              </h4>
-            </div>
-            <div class="card-content">
-              <p>CGPA: 6.4/10</p>
-            </div>
-          </div>
-
-           <div class="card">
-            <div class="card-header">
-              <h4>
-                 Secondary School
-                <!-- <span class="job-title">Guru Nanak Institutions Technical Campus, Hyderabad, India</span> -->
-                <span class="job-title">Year of Passing - 2017</span>
-              </h4>
-            </div>
-            <div class="card-content">
-              <p>CGPA: 7.6/10</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END EDUCATION -->
-
-    <!-- BEGIN PROJECTS -->
-    <div class="row">
-      <div class="side-content-sm"></div>
-      <div class="main-content-lg">
-        <div class="content-header">
-          <a class="anchor" name="projects"></a>
-          <h2>Projects</h2>
-        </div>
-        <div class="content-body">
-          <!-- Booking Management & Payment Portal -->
-          <div class="project-card">
-            <div class="project-content">
-              <h4>Booking Management & Payment Portal (Pravasy)</h4>
-              <ul>
-                <li>Developed a multi-screen booking platform using React, TypeScript, and MUI</li>
-                <li>Built pages for viewing booking requests, creating new booking forms, and displaying detailed booking information</li>
-                <li>Integrated Razorpay for one-time and installment payments, and implemented secure file upload via AWS S3</li>
+          <div class="skill-group">
+            <dt>UI / UX</dt>
+            <dd>
+              <ul class="tags">
+                <li>Figma</li>
+                <li>Wireframing</li>
+                <li>Prototyping</li>
               </ul>
-            </div>
+            </dd>
           </div>
-          <!-- Clinic Appointment Booking System -->
-          <div class="project-card">
-            <div class="project-content">
-              <h4>Clinic Appointment Booking System</h4>
-              <ul>
-                <li>Built booking flows with form validation, time-slot selection, and email confirmation</li>
-                <li>Implemented the entire frontend using React, TypeScript, and MUI based on Figma prototypes</li>
+          <div class="skill-group">
+            <dt>Workflow</dt>
+            <dd>
+              <ul class="tags">
+                <li>Git</li>
+                <li>Jira</li>
+                <li>CI/CD</li>
+                <li>GitHub Actions</li>
               </ul>
-            </div>
+            </dd>
           </div>
-          <!-- Café Management Dashboard -->
-          <div class="project-card">
-            <div class="project-content">
-              <h4>Café Management Dashboard</h4>
-              <ul>
-                <li>Converted Figma designs into responsive MUI components</li>
-                <li>Built reusable UI modules for inventory, orders, and staff tracking</li>
-                <li>Implemented sales analytics pages using React and TypeScript</li>
-              </ul>
+        </dl>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <div class="section-head">
+          <span class="section-index">05</span>
+          <h2 class="section-title" id="education-title">Education</h2>
+        </div>
+
+        <ul class="edu-list">
+          <li class="edu">
+            <div class="edu-main">
+              <h3>Bachelor of Engineering, Computer Science</h3>
+              <p>Guru Nanak Institutions Technical Campus <span class="dot">·</span> Hyderabad, India</p>
             </div>
+            <div class="edu-meta">
+              <p class="edu-year">2024</p>
+              <p class="edu-score">CGPA 6.5<span>/10</span></p>
+            </div>
+          </li>
+          <li class="edu">
+            <div class="edu-main">
+              <h3>Diploma, Computer Science Engineering</h3>
+              <p>TKR College of Engineering &amp; Technology <span class="dot">·</span> Hyderabad, India</p>
+            </div>
+            <div class="edu-meta">
+              <p class="edu-year">2020</p>
+              <p class="edu-score">CGPA 6.4<span>/10</span></p>
+            </div>
+          </li>
+          <li class="edu">
+            <div class="edu-main">
+              <h3>Secondary School</h3>
+              <p>&mdash;</p>
+            </div>
+            <div class="edu-meta">
+              <p class="edu-year">2017</p>
+              <p class="edu-score">CGPA 7.6<span>/10</span></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="split">
+          <div class="split-col">
+            <h3 class="minor-title">Languages</h3>
+            <ul class="tags">
+              <li>English <span class="tag-note">fluent</span></li>
+              <li>Hindi <span class="tag-note">fluent</span></li>
+              <li>Telugu <span class="tag-note">fluent</span></li>
+              <li>Marathi <span class="tag-note">native</span></li>
+            </ul>
           </div>
-          <!-- Real Estate Listing Dashboard -->
-          <div class="project-card">
-            <div class="project-content">
-              <h4>Real Estate Listing Dashboard</h4>
-              <ul>
-                <li>Built using Next.js with TypeScript and MUI</li>
-                <li>Developed UI for agents to post property listings, upload images, and manage inquiries</li>
-                <li>Integrated AWS S3 for secure image uploads and built dynamic, form-heavy pages with advanced filtering</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Pravasy.com -->
-          <div class="project-card">
-            <div class="project-content">
-              <h4>Pravasy.com (Nellsys)</h4>
-              <ul>
-                <li>Built the public-facing website using React.js, TypeScript, and MUI</li>
-                <li>Implemented responsive layouts and reusable components based on Figma designs</li>
-                <li>Showcased Pravasy's services with clean UI</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="side-content-sm"></div>
-    </div>
-    <!-- END PROJECTS -->
-
-    <!-- BEGIN SKILLS -->
-    <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="skills"></a>
-          <h2>Skills</h2>
-        </div>
-        <div class="content-body">
-          <ul class="ul-skills">
-            <li class="li-skills"><strong>Frontend:</strong> React.js, Next.js, Context API, TypeScript, Material-UI, Tailwind CSS, Bootstrap & React Bootstrap</li>
-            <li class="li-skills"><strong>Backend:</strong> Node.js, Express.js, Socket.io</li>
-            <li class="li-skills"><strong>Cloud & DevOps:</strong> AWS (S3, CloudFront, Lambda, EC2 - Basic), Firebase, Azure DevOps</li>
-            <li class="li-skills"><strong>Databases:</strong> Firebase Firestore, MongoDB</li>
-            <li class="li-skills"><strong>UI/UX:</strong> Figma, Wireframing, Prototyping Tools</li>
-            <li class="li-skills"><strong>Workflow:</strong> Git, Jira, CI/CD, Azure (GitHub Actions)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END SKILLS -->
-
-    <!-- BEGIN CERTIFICATIONS -->
-    <!-- <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="certifications"></a>
-          <h2>Certifications</h2>
-        </div>
-        <div class="content-body">
-          <ul>
-            <li>React.js Developer Certification – Coursera (2022)</li>
-            <li>JavaScript Algorithms and Data Structures – freeCodeCamp (2021)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="side-content"></div>
-    </div> -->
-    <!-- END CERTIFICATIONS -->
-
-    <!-- BEGIN LANGUAGES -->
-    <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="languages"></a>
-          <h2>Languages</h2>
-        </div>
-        <div class="content-body">
-          <ul>
-            <li>English (Fluent)</li>
-            <li>Hindi (Fluent)</li>
-            <li>Telugu (Fluent)</li>
-            <li>Marathi (Native)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END LANGUAGES -->
-
-    <!-- BEGIN INTERESTS -->
-    <div class="row white box-shadow">
-      <div class="side-content"></div>
-      <div class="main-content">
-        <div class="content-header">
-          <a class="anchor" name="interests"></a>
-          <h2>Interests</h2>
-        </div>
-        <div class="content-body">
-          <ul>
-            <li>Open-source contributions</li>
-            <li>Learning new JavaScript frameworks</li>
-         
-          </ul>
-        </div>
-      </div>
-      <div class="side-content"></div>
-    </div>
-    <!-- END INTERESTS -->
-
-    <!-- BEGIN CONTACT -->
-      <!-- <div class="row contact-section">
-        <div class="side-content"></div>
-        <div class="main-content">
-          <div class="content-header">
-            <a class="anchor" name="contact"></a>
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="section-subtitle">Feel free to reach out through any of these channels</p>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-card hover-effect">
-              <div class="contact-icon pulse">
-                <i class="fa fa-envelope fa-2x"></i>
-              </div>
-              <h4 class="contact-type">Email</h4>
-              <a href="mailto:kaustubhvasagadekar@gmail.com" class="contact-link">
-                <span class="contact-text">kaustubh.v14@gmail.com</span>
-              </a>
-            </div>
-            <div class="contact-card hover-effect">
-              <div class="contact-icon pulse">
-                <i class="fa fa-phone fa-2x"></i>
-              </div>
-              <h4 class="contact-type">Phone</h4>
-              <a href="tel:+919154847410" class="contact-link">
-                <span class="contact-text">+91-9154847410</span>
-              </a>
-            </div>
-            <div class="contact-card hover-effect">
-              <div class="contact-icon pulse">
-                <i class="fa fa-linkedin fa-2x"></i>
-              </div>
-              <h4 class="contact-type">LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/kaustubhsv" target="_blank" class="contact-link">
-                <span class="contact-text">Connect with me</span>
-                <i class="fa fa-external-link"></i>
-              </a>
-            </div>
-            <div class="contact-card hover-effect">
-              <div class="contact-icon pulse">
-                <i class="fa fa-github fa-2x"></i>
-              </div>
-              <h4 class="contact-type">GitHub</h4>
-              <a href="https://github.com/KaustubhVasagadekar" target="_blank" class="contact-link">
-                <span class="contact-text">View my work</span>
-                <i class="fa fa-external-link"></i>
-              </a>
-            </div>
+          <div class="split-col">
+            <h3 class="minor-title">Interests</h3>
+            <ul class="tags">
+              <li>Open-source contributions</li>
+              <li>Learning new JavaScript frameworks</li>
+            </ul>
           </div>
         </div>
-        <div class="side-content"></div>
-      </div> -->
-    <!-- END CONTACT -->
+      </section>
 
-    <!-- BEGIN FOOTER -->
-    <div class="row">
-      <div class="side-content"></div>
-      <div class="main-content">
-       
-        <div class="content-body">
-          <p>Copyright Kaustubh Vasagadekar @2024</p>
+      <!-- CONTACT -->
+      <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+        <div class="section-head">
+          <span class="section-index">06</span>
+          <h2 class="section-title" id="contact-title">Contact</h2>
         </div>
-      </div>
-    </div>
-    <!-- END FOOTER -->
+
+        <p class="contact-pitch">Let&rsquo;s build something.</p>
+        <p class="prose">
+          Open to frontend work and collaboration. The fastest way to reach me is email &mdash; I reply to everything.
+        </p>
+
+        <a class="contact-email" href="mailto:kaustubhvasagadekar@gmail.com">
+          <span>kaustubhvasagadekar@gmail.com</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-out" /></svg>
+        </a>
+
+        <ul class="contact-links">
+          <li>
+            <a href="tel:+919665950080">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>
+              <span>+91 96659 50080</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/KaustubhVasagadekar" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/kaustubh-vasagadekar" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; <span id="year">2026</span> Kaustubh Vasagadekar</p>
+        <p class="footer-note">Hand-coded — HTML, CSS &amp; a little JavaScript.</p>
+      </footer>
+    </main>
   </div>
-</body>
 
+  <script src="script.js" defer></script>
+</body>
 
 </html>
