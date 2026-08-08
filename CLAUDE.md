@@ -37,10 +37,27 @@ Repeated content primitives: `.section` + `.section-head`, `.points` (hanging-ru
 
 `@media print` at the bottom of `style.css` turns the page into a résumé: rail nav and decoration hidden, `break-inside: avoid` on entries/projects, and the icon-only social row expanded into labelled URLs. The `mailto:`/`tel:` `::after` rules hardcode the display strings — update them if the contact details change.
 
-## Content notes
+## Content — source of truth
 
-- Experience entries are ordered by **end date**, not start date, because the freelance role overlaps the employed ones.
-- Tech tags on each experience entry and project are derived strictly from that item's own bullet text. Don't add tags that aren't supported by the copy.
-- The three non-Nellsys experience entries share identical bullet copy — that came from the original content and is placeholder text the owner still needs to replace.
-- Contact details use the values that were live in the old markup (`kaustubhvasagadekar@gmail.com`, `+91 96659 50080`, `linkedin.com/in/kaustubh-vasagadekar`). An older commented-out block in git history carried different ones (`kaustubh.v14@gmail.com`, `+91-9154847410`, `linkedin.com/in/kaustubhsv`); confirm with the owner before switching.
-- `image/*.png` are currently unreferenced — there is no project-thumbnail treatment in the design.
+**All page content comes from `C:\resume-job`, not from this repo's history.** That folder is a resume rebuild that corrected nine factual contradictions between an old resume and a LinkedIn export.
+
+- `2-working-files/ANSWERS.md` is the **source of truth**. It explicitly overrides both original documents wherever they disagree. Check it before changing any fact on this page.
+- `2-working-files/kaustubh-master.md` is the master resume the copy is drawn from.
+- The portfolio, the resume and LinkedIn must tell **one story** — recruiters read them side by side, and mismatched titles or dates are the exact failure this content was rebuilt to fix. A change here needs the same change there.
+
+Facts that were wrong on this site before and must not regress:
+
+- Nellsys title is **Software Engineer-I** (not "Jn./Junior Software Developer").
+- OpenWifi Labs is **Dec 2019 – May 2020** (not Nov 2018 – May 2019).
+- **AWS Cloud Practitioner and Google UX Design are not held** — they were falsely claimed on the old resume. Never reinstate.
+- Four Anthropic courses were **withdrawn by the owner** (MCP Advanced, Bedrock, Vertex AI, Claude API). Only the six listed may appear. Any claim about Bedrock deployment or Claude API certification stays off.
+- The freelance entry was **cut deliberately** — "a few small projects, stretched to fill the timeline".
+- Estimated metrics were removed; only measured ones survive. The **30% load-time reduction is the single hard performance metric** on the page and was measured in Lighthouse. Don't add percentages that aren't measured.
+- Contact details are `kaustubh.v14@gmail.com`, `+91 91548 47410`, `linkedin.com/in/kaustubhsv`. The other set that appears in this repo's git history is stale.
+
+Other conventions:
+
+- Experience is reverse-chronological by end date.
+- Tech tags are derived strictly from that item's own verified copy. Don't add tags the text doesn't support.
+- The print stylesheet hardcodes the email and phone display strings in `::after` — update them alongside the markup.
+- `image/*.png` are unreferenced; there is no project-thumbnail treatment in the design.

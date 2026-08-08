@@ -557,6 +557,15 @@ main {
 
 .dot { color: var(--line-2); padding-inline: .15em; }
 
+/* Promotion / context line under a role. */
+.entry-note {
+  margin-top: var(--sp-2);
+  padding-left: .6rem;
+  border-left: 2px solid var(--accent);
+  font-size: var(--step--1);
+  color: var(--ink-2);
+}
+
 /* ---------- 7. Projects ------------------------------------ */
 
 .project-grid {
@@ -596,19 +605,91 @@ main {
   color: var(--ink);
 }
 
-.project-client {
-  display: inline-block;
-  margin-left: .35rem;
-  font-family: var(--font-mono);
-  font-size: var(--step--2);
-  font-weight: 500;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--accent);
-  vertical-align: middle;
+.project .points { margin-top: var(--sp-3); }
+
+.project-blurb {
+  margin-top: var(--sp-2);
+  font-size: var(--step--1);
+  color: var(--ink-2);
 }
 
-.project .points { margin-top: var(--sp-3); }
+/* Live link — the strongest thing on a project card, so it reads
+   as an affordance rather than another line of body copy. */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: .04em;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.project-link .icon {
+  width: .9rem;
+  height: .9rem;
+  transition: transform .25s var(--ease);
+}
+
+.project-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.project-link:hover .icon { transform: translate(2px, -2px); }
+
+/* ---------- 7b. Certifications ------------------------------ */
+
+.cert-list {
+  display: grid;
+  margin-top: var(--sp-5);
+  border-top: 1px solid var(--line);
+}
+
+.cert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-block: var(--sp-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-main h4 {
+  font-size: var(--step-0);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.cert-main p {
+  margin-top: .1rem;
+  font-size: var(--step--1);
+  color: var(--ink-3);
+}
+
+.cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  transition: color .2s var(--ease);
+}
+
+.cert-verify .icon {
+  width: .85rem;
+  height: .85rem;
+  transition: transform .25s var(--ease);
+}
+
+.cert-verify:hover { color: var(--accent); }
+.cert-verify:hover .icon { transform: translate(2px, -2px); }
+
+.cert-extra { margin-top: var(--sp-6); }
+.cert-extra .tags { margin-top: 0; }
 
 /* ---------- 8. Skills -------------------------------------- */
 
@@ -664,14 +745,6 @@ main {
   gap: var(--sp-4);
   text-align: right;
 }
-
-.edu-score {
-  font-size: var(--step--1);
-  font-variant-numeric: tabular-nums;
-  color: var(--ink-2);
-}
-
-.edu-score span { color: var(--ink-3); }
 
 .split {
   display: grid;
@@ -931,6 +1004,7 @@ main {
   .section,
   .entry,
   .project,
+  .cert,
   .edu { break-inside: avoid; }
 
   .section { padding-block-end: 14pt; }
@@ -966,7 +1040,16 @@ main {
     color: #333;
   }
 
-  .social a[href^="mailto:"]::after { content: "kaustubhvasagadekar@gmail.com"; }
-  .social a[href^="tel:"]::after { content: "+91 96659 50080"; }
+  .social a[href^="mailto:"]::after { content: "kaustubh.v14@gmail.com"; }
+  .social a[href^="tel:"]::after { content: "+91 91548 47410"; }
   .contact-email::after { content: none; }
+
+  /* Certificates are the differentiator — print the verify URLs. */
+  .cert-verify span { display: none; }
+  .cert-verify::after {
+    content: attr(href);
+    font-family: var(--font-mono);
+    font-size: 8pt;
+    color: #333;
+  }
 }
